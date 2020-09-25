@@ -2,16 +2,16 @@ package com.simbir.kotlinpractice.data.net.model
 
 import com.google.gson.annotations.SerializedName
 
-data class CategorNet(
+data class CategoryNet(
 
     @SerializedName("name")
-    private val name: String,
+    val name: String,
 
     @SerializedName("nameEn")
-    private val nameEn: String,
+    val nameEn: String,
 
     @SerializedName("id")
-    private val id: String,
+    val id: String,
 
     @SerializedName("image")
-    private val image: String)
+    val image: String)

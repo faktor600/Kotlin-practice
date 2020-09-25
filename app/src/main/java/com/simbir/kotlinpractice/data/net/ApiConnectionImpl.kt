@@ -1,6 +1,6 @@
 package com.simbir.kotlinpractice.data.net
 
-import com.simbir.kotlinpractice.data.net.model.CategorNet
+import com.simbir.kotlinpractice.data.net.model.CategoryNet
 import com.simbir.kotlinpractice.data.net.model.EventNet
 import io.reactivex.rxjava3.core.Single
 
@@ -15,7 +15,7 @@ class ApiConnectionImpl(private val retrofitApi: HelpApi): ApiConnection {
         return retrofitApi.getEvents()
     }
 
-    override fun getCategoryList(): Single<List<CategorNet>> {
+    override fun getCategoryList(): Single<List<CategoryNet>> {
         return retrofitApi.getCategoriesEnglishName()
             .flattenAsFlowable { categories -> categories }
             .flatMapSingle { name -> retrofitApi.getCategory(name) }
