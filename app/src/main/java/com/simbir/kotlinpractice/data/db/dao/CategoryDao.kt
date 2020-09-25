@@ -1,7 +1,7 @@
-package com.simbir.kotlinpractice.data.dao
+package com.simbir.kotlinpractice.data.db.dao
 
 import androidx.room.*
-import com.simbir.kotlinpractice.data.db.CategoryDBEntitiy
+import com.simbir.kotlinpractice.data.db.entity.CategoryDBEntitiy
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Maybe
 

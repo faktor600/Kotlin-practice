@@ -1,9 +1,9 @@
-package com.simbir.kotlinpractice.data.db
+package com.simbir.kotlinpractice.data.db.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.simbir.kotlinpractice.data.StringConverter
+import com.simbir.kotlinpractice.data.db.StringConverter
 
 @Entity
 @TypeConverters(StringConverter::class)

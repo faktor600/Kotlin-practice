@@ -1,4 +1,4 @@
-package com.simbir.kotlinpractice.data
+package com.simbir.kotlinpractice.data.db
 
 import androidx.room.TypeConverter
 
