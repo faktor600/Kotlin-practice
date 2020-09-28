@@ -2,7 +2,7 @@ package com.simbir.kotlinpractice.data.net.model
 
 import com.google.gson.annotations.SerializedName
 
-data class EventNet(
+class EventNet(
 
     @SerializedName("id")
     val id: String,
