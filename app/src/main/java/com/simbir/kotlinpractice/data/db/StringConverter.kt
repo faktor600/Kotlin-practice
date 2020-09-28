@@ -9,11 +9,6 @@ class StringConverter {
 
     @TypeConverter
     fun fromListToString(items: List<String>): String{
-        return items.stream().collect(Collectors.joining(","))
-    }
-
-    @TypeConverter
-    fun fromStringToList(string: String): List<String>{
-        return listOf(string, ",")
+        return items.joinToString()
     }
 }

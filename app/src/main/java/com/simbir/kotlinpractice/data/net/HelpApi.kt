@@ -11,7 +11,7 @@ interface HelpApi {
     fun getCategoriesEnglishName(): Single<List<String>>
 
     @GET("categories")
-    fun getCategory(nameInEnglish: String): Single<CategoryNet>
+    fun getCategory(name: String): Single<CategoryNet>
 
     @GET("events")
     fun getEventById(id: Int): Single<EventNet>

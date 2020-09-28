@@ -1,6 +1,6 @@
 package com.simbir.kotlinpractice.data.json.map
 
-import com.simbir.kotlinpractice.data.json.model.EventJson
+import com.simbir.kotlinpractice.data.json.EventJson
 import com.simbir.kotlinpractice.domain.Event
 
 class JsonEventMap {
