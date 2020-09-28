@@ -1,4 +1,4 @@
-package com.simbir.kotlinpractice.data.json.model
+package com.simbir.kotlinpractice.data.json
 
 import com.google.gson.annotations.SerializedName
 
