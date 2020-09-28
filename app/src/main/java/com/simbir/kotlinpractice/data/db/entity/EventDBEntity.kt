@@ -19,4 +19,5 @@ data class EventDBEntity(
     val eMail: String,
     val description: String,
     val images: List<String>,
-    val site: String)
+    val site: String
+)

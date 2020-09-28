@@ -8,4 +8,5 @@ data class CategoryDBEntitiy(
     @PrimaryKey
     val id: Long,
     val name: String,
-    val imageRes: Int)
+    val imageRes: Int
+)
