@@ -2,7 +2,7 @@ package com.simbir.kotlinpractice.data.net.model
 
 import com.google.gson.annotations.SerializedName
 
-data class CategoryNet(
+class CategoryNet(
 
     @SerializedName("name")
     val name: String,
@@ -14,4 +14,5 @@ data class CategoryNet(
     val id: String,
 
     @SerializedName("image")
-    val image: String)
+    val image: String
+)

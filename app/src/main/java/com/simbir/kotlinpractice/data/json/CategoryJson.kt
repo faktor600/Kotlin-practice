@@ -1,8 +1,8 @@
-package com.simbir.kotlinpractice.data.json.model
+package com.simbir.kotlinpractice.data.json
 
 import com.google.gson.annotations.SerializedName
 
-data class CategoryJson(
+class CategoryJson(
 
     @SerializedName("id")
     val id: Int,
