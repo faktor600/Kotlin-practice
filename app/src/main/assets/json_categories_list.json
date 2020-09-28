@@ -1,0 +1,19 @@
+{"helpCategories":[
+  {"id" : 1,
+    "name" :  "Дети",
+    "drawableId" : "R.drawable.icon_kids"
+  },
+  {"id" : 2,
+    "name" :  "Взрослые",
+    "drawableId" : "R.drawable.icon_adult"},
+  {"id" : 3,
+    "name" :  "Пожилые",
+    "drawableId" : "R.drawable.icon_animals"},
+  {"id" : 4,
+    "name" :  "Животные",
+    "drawableId" : "R.drawable.icon_elderly"},
+  {"id" : 5,
+    "name" :  "Мероприятия",
+    "drawableId" : "R.drawable.icon_event"}
+]
+}
