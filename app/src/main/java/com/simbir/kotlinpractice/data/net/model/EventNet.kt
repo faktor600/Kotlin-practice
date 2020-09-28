@@ -44,4 +44,5 @@ data class EventNet(
     val eMail: String,
 
     @SerializedName("site")
-    val site: String)
+    val site: String
+)

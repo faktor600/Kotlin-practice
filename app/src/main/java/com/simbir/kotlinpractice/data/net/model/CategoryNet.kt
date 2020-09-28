@@ -14,4 +14,5 @@ data class CategoryNet(
     val id: String,
 
     @SerializedName("image")
-    val image: String)
+    val image: String
+)
