@@ -18,6 +18,12 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        buildTypes.each {
+            it.buildConfigField 'String', 'BASE_URL', BASE_URL
+
+            it.buildConfigField 'String', 'JSON_CATEGORIES_LIST', JSON_CATEGORIES_LIST
+            it.buildConfigField 'String', 'JSON_EVENTS_LIST', JSON_EVENTS_LIST
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
