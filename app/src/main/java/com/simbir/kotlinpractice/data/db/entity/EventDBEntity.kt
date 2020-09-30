@@ -10,14 +10,17 @@ import com.simbir.kotlinpractice.data.db.StringConverter
 data class EventDBEntity(
     @PrimaryKey
     val id: Long,
-    val eventName: Int,
+    val eventName: String,
+    @TypeConverters(StringConverter::class)
     val eventCategories: List<String>,
     val date: String,
     val orgName: String,
     val location: String,
+    @TypeConverters(StringConverter::class)
     val phoneNumbers: List<String>,
     val eMail: String,
     val description: String,
+    @TypeConverters(StringConverter::class)
     val images: List<String>,
     val site: String
 )

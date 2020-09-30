@@ -16,3 +16,4 @@ class CategoryNet(
     @SerializedName("image")
     val image: String
 )
+
