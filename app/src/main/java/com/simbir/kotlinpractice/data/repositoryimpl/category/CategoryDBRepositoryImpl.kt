@@ -14,7 +14,7 @@ class CategoryDBRepositoryImpl(
     override fun getCategoryListFromDatabase(): Single<List<Category>> {
         return categoryDao.getAll()
             .flattenAsFlowable { categoryList -> categoryList }
-            .map { category -> mapper.getCategoryFromDatabase(category) }
+            .map { category -> mapper.invoke(category) }
             .toList()
     }
 }

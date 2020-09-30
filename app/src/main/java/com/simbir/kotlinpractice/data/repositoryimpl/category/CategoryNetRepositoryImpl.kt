@@ -15,7 +15,7 @@ class CategoryNetRepositoryImpl(
         return api.getCategoriesEnglishName()
             .flattenAsFlowable { englishName -> englishName }
             .flatMapSingle { name -> api.getCategory(name) }
-            .map { category -> mapper.getCategoryFromNet(category) }
+            .map { category -> mapper.invoke(category) }
             .toList()
     }
 }

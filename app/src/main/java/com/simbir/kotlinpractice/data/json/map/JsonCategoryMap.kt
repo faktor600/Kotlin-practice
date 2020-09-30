@@ -1,11 +1,13 @@
 package com.simbir.kotlinpractice.data.json.map
 
-import com.simbir.kotlinpractice.data.json.model.CategoryJson
+import com.simbir.kotlinpractice.data.json.CategoryJson
 import com.simbir.kotlinpractice.domain.Category
 
-class JsonCategoryMap {
+class JsonCategoryMap : (CategoryJson) -> Category {
 
-    fun getCategoryFromJson(category: CategoryJson): Category{
-        return Category(category.id, category.categoryName, category.drawableRes.toString())
-    }
+    override fun invoke(category: CategoryJson) = Category(
+        id = category.id,
+        drawable = category.drawableRes,
+        name = category.categoryName
+    )
 }

@@ -1,6 +1,7 @@
 package com.simbir.kotlinpractice.data.repositoryimpl.category
 
 import com.google.gson.Gson
+import com.simbir.kotlinpractice.data.json.CategoryJson
 import com.simbir.kotlinpractice.data.json.map.JsonCategoryMap
 import com.simbir.kotlinpractice.domain.Category
 import com.simbir.kotlinpractice.domain.repository.category.CategoryJsonRepository
@@ -16,7 +17,7 @@ class CategoryJsonRepositoryImpl(
     override fun getCategoryListFromJson(): Single<List<Category>> {
         return Single.just(gson.fromJson(initJson().orEmpty(), List::class.java))
             .flattenAsFlowable { categoryList -> categoryList }
-            .map { category -> mapper.getCategoryFromJson(category) }
+            .map { category -> mapper.invoke(category as CategoryJson) }
             .toList()
 
     }
