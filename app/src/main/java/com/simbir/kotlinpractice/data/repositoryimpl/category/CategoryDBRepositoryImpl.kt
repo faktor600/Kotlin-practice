@@ -7,18 +7,17 @@ import com.simbir.kotlinpractice.domain.repository.category.CategoryDBRepository
 import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
 
-class CategoryDBRepositoryImpl
+class CategoryDBRepositoryImpl @Inject constructor(
 
-@Inject
-constructor(
     private val categoryDao: CategoryDao,
     private val mapper: DBCategoryMap
+
 ): CategoryDBRepository {
 
     override fun getCategoryListFromDatabase(): Single<List<Category>> {
         return categoryDao.getAll()
             .flattenAsFlowable { categoryList -> categoryList }
-            .map { category -> mapper.invoke(category) }
+            .map(mapper)
             .toList()
     }
 }
