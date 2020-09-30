@@ -7,8 +7,12 @@ import com.simbir.kotlinpractice.domain.Category
 import com.simbir.kotlinpractice.domain.repository.category.CategoryJsonRepository
 import io.reactivex.rxjava3.core.Single
 import java.io.InputStream
+import javax.inject.Inject
 
-class CategoryJsonRepositoryImpl(
+class CategoryJsonRepositoryImpl
+
+@Inject
+constructor(
     private val inputStream: InputStream?,
     private val gson: Gson,
     private val mapper: JsonCategoryMap

@@ -5,8 +5,12 @@ import com.simbir.kotlinpractice.data.db.map.DBCategoryMap
 import com.simbir.kotlinpractice.domain.Category
 import com.simbir.kotlinpractice.domain.repository.category.CategoryDBRepository
 import io.reactivex.rxjava3.core.Single
+import javax.inject.Inject
 
-class CategoryDBRepositoryImpl(
+class CategoryDBRepositoryImpl
+
+@Inject
+constructor(
     private val categoryDao: CategoryDao,
     private val mapper: DBCategoryMap
 ): CategoryDBRepository {
