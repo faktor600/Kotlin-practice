@@ -9,13 +9,12 @@ import io.reactivex.rxjava3.core.Single
 import java.util.*
 import javax.inject.Inject
 
-class CategoryRepositoryImpl
+class CategoryRepositoryImpl @Inject constructor(
 
-@Inject
-constructor(
     private val categoryDB: CategoryDBRepositoryImpl,
     private val categoryNet: CategoryNetRepositoryImpl,
     private val categoryJson: CategoryJsonRepositoryImpl
+
 ): CategoryRepository {
 
     override fun getCategoryList(): Single<List<Category>> {

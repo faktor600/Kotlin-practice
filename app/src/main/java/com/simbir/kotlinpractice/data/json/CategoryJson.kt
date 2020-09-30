@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 class CategoryJson(
 
     @SerializedName("id")
-    val id: Int,
+    val id: Long,
 
     @SerializedName("name")
     val categoryName: String,

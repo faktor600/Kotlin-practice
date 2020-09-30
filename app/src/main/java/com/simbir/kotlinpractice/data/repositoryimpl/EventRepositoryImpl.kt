@@ -7,11 +7,14 @@ import com.simbir.kotlinpractice.domain.Event
 import com.simbir.kotlinpractice.domain.repository.event.EventNetRepository
 import io.reactivex.rxjava3.core.Single
 import java.util.*
+import javax.inject.Inject
 
-class EventRepositoryImpl(
+class EventRepositoryImpl @Inject constructor(
+
     private val eventJson: EventJsonRepositoryImpl,
     private val eventNet: EventNetRepositoryImpl,
     private val eventDB: EventDBRepositoryImpl
+
 ): EventNetRepository {
 
     override fun getEventListFromNet(): Single<List<Event>> {

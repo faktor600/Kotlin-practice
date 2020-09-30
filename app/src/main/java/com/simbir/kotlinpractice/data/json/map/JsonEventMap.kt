@@ -1,13 +1,21 @@
 package com.simbir.kotlinpractice.data.json.map
 
-import com.simbir.kotlinpractice.data.json.model.EventJson
+import com.simbir.kotlinpractice.data.json.EventJson
 import com.simbir.kotlinpractice.domain.Event
 
-class JsonEventMap {
+class JsonEventMap : (EventJson) -> Event {
 
-    fun getEventFromJson(event: EventJson): Event{
-        return Event(event.id, event.eventName, event.eventCategories, event.date,
-            event.organizationName, event.location, event.phoneNumbers, event.eMail,
-            event.description, event.imageUrls, event.site)
-    }
+    override fun invoke(event: EventJson) = Event(
+        id = event.id,
+        eventName = event.eventName,
+        eventCategories = event.eventCategories,
+        date = event.date,
+        organizationName = event.organizationName,
+        location = event.location,
+        phoneNumbers = event.phoneNumbers,
+        eMail =  event.eMail,
+        description = event.description,
+        imageUrls = event.imageUrls,
+        site = event.site
+    )
 }
