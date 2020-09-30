@@ -46,3 +46,4 @@ class EventNet(
     @SerializedName("site")
     val site: String
 )
+
