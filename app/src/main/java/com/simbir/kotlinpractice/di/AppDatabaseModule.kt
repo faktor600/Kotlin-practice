@@ -6,11 +6,11 @@ import com.simbir.kotlinpractice.data.db.AppDatabase
 import com.simbir.kotlinpractice.data.db.dao.CategoryDao
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 @Module
 class AppDatabaseModule(private val context: Context) {
 
+    @AppDatabaseScope
     private val appDatabase = Room.databaseBuilder(
         context,
         AppDatabase::class.java,
