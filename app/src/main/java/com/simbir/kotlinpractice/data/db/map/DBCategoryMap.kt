@@ -6,8 +6,8 @@ import com.simbir.kotlinpractice.domain.Category
 class DBCategoryMap : (CategoryDBEntitiy) -> Category{
 
     override fun invoke(category: CategoryDBEntitiy) = Category(
-        category.id,
-        category.imageRes,
-        category.name
+        id = category.id,
+        drawable = category.imageRes,
+        name = category.name
     )
 }

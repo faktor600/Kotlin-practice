@@ -6,16 +6,16 @@ import com.simbir.kotlinpractice.domain.Event
 class NetEventMap : (EventNet) -> Event {
 
     override fun invoke(event: EventNet) = Event(
-        event.id.toLong(),
-        event.evenName,
-        event.categories,
-        "${event.startDate} - ${event.endDate}",
-        event.organization,
-        event.location,
-        listOf(event.phone),
-        event.eMail,
-        event.description,
-        event.photos,
-        event.site
+        id = event.id.toLong(),
+        eventName = event.evenName,
+        eventCategories = event.categories,
+        date = "${event.startDate} - ${event.endDate}",
+        organizationName = event.organization,
+        location = event.location,
+        phoneNumbers = listOf(event.phone),
+        eMail = event.eMail,
+        description = event.description,
+        imageUrls = event.photos,
+        site = event.site
     )
 }

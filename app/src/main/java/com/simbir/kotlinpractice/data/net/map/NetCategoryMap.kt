@@ -6,8 +6,8 @@ import com.simbir.kotlinpractice.domain.Category
 class NetCategoryMap : (CategoryNet) -> Category {
 
     override fun invoke(category: CategoryNet) = Category(
-        category.id.toLong(),
-        category.image.toInt(),
-        category.name
+        id = category.id.toLong(),
+        drawable = category.image.toInt(),
+        name = category.name
     )
 }
