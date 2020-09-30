@@ -1,10 +1,11 @@
 package com.simbir.kotlinpractice.domain
 
-import android.os.Parcel
 import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Event(
-    val id: Int,
+    val id: Long,
     val eventName: String,
     val eventCategories: List<String>,
     val date: String,
@@ -16,48 +17,6 @@ data class Event(
     val imagesUrl: List<String>,
     val site: String
 ) : Parcelable {
-
-    constructor(parcel: Parcel) : this(
-        parcel.readInt(),
-        parcel.readString(),
-        parcel.createStringArrayList(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.createStringArrayList(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.createStringArrayList(),
-        parcel.readString()
-    )
-
-    companion object CREATOR : Parcelable.Creator<Event> {
-        override fun createFromParcel(parcel: Parcel): Event {
-            return Event(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Event?> {
-            return arrayOfNulls(size)
-        }
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    override fun writeToParcel(parcel: Parcel?, p1: Int) {
-        parcel?.writeInt(id)
-        parcel?.writeString(eventName)
-        parcel?.writeStringList(eventCategories)
-        parcel?.writeString(date)
-        parcel?.writeString(organizationName)
-        parcel?.writeString(location)
-        parcel?.writeStringList(phoneNumbers)
-        parcel?.writeString(eMail)
-        parcel?.writeString(description)
-        parcel?.writeStringList(imagesUrl)
-        parcel?.writeString(site)
-    }
 
     override fun equals(other: Any?): Boolean {
         return when (other) {

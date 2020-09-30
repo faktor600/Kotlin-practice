@@ -3,9 +3,11 @@ package com.simbir.kotlinpractice.data.db.map
 import com.simbir.kotlinpractice.data.db.entity.CategoryDBEntitiy
 import com.simbir.kotlinpractice.domain.Category
 
-class DBCategoryMap {
+class DBCategoryMap : (CategoryDBEntitiy) -> Category{
 
-    fun getCategoryFromDatabase(category: CategoryDBEntitiy): Category{
-        return Category(category.id.toInt(), category.name, category.imageRes.toString())
-    }
+    override fun invoke(category: CategoryDBEntitiy) = Category(
+        category.id,
+        category.imageRes,
+        category.name
+    )
 }
