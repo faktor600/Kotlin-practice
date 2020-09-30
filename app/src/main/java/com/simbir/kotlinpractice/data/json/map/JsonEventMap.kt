@@ -2,8 +2,9 @@ package com.simbir.kotlinpractice.data.json.map
 
 import com.simbir.kotlinpractice.data.json.EventJson
 import com.simbir.kotlinpractice.domain.Event
+import javax.inject.Inject
 
-class JsonEventMap : (EventJson) -> Event {
+class JsonEventMap @Inject constructor(): (EventJson) -> Event {
 
     override fun invoke(event: EventJson) = Event(
         id = event.id,

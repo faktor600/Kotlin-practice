@@ -2,8 +2,9 @@ package com.simbir.kotlinpractice.data.net.map
 
 import com.simbir.kotlinpractice.data.net.model.EventNet
 import com.simbir.kotlinpractice.domain.Event
+import javax.inject.Inject
 
-class NetEventMap : (EventNet) -> Event {
+class NetEventMap @Inject constructor(): (EventNet) -> Event {
 
     override fun invoke(event: EventNet) = Event(
         id = event.id.toLong(),

@@ -2,8 +2,9 @@ package com.simbir.kotlinpractice.data.db.map
 
 import com.simbir.kotlinpractice.data.db.entity.EventDBEntity
 import com.simbir.kotlinpractice.domain.Event
+import javax.inject.Inject
 
-class DBEventMap : (EventDBEntity) -> Event {
+class DBEventMap @Inject constructor(): (EventDBEntity) -> Event {
 
     override fun invoke(event: EventDBEntity) = Event(
         id = event.id,
