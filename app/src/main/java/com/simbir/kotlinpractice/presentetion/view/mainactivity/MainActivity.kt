@@ -11,7 +11,7 @@ import com.simbir.kotlinpractice.presentetion.utils.ViewPagerListener
 import com.simbir.kotlinpractice.presentetion.view.BaseActivity
 import javax.inject.Inject
 
-class MainActivity : BaseActivity(), MainAcitvityView {
+class MainActivity : BaseActivity(), MainActivityView {
 
     private val HELP_PAGE = 2
 

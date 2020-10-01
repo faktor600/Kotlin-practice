@@ -1,8 +1,8 @@
 package com.simbir.kotlinpractice.presentetion.presenter
 
-import com.simbir.kotlinpractice.presentetion.view.mainactivity.MainAcitvityView
+import com.simbir.kotlinpractice.presentetion.view.mainactivity.MainActivityView
 import moxy.InjectViewState
 import moxy.MvpPresenter
 
 @InjectViewState
-class MainActivityPresenter: MvpPresenter<MainAcitvityView>()
+class MainActivityPresenter: MvpPresenter<MainActivityView>()
