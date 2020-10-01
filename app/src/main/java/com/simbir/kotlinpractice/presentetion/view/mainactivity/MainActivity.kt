@@ -9,13 +9,13 @@ import com.simbir.kotlinpractice.presentetion.presenter.MainActivityPresenter
 import com.simbir.kotlinpractice.presentetion.utils.BottomNavigation
 import com.simbir.kotlinpractice.presentetion.utils.ViewPagerListener
 import com.simbir.kotlinpractice.presentetion.view.BaseActivity
-import javax.inject.Inject
+import moxy.presenter.InjectPresenter
 
 class MainActivity : BaseActivity(), MainActivityView {
 
     private val HELP_PAGE = 2
 
-    @Inject
+    @InjectPresenter
     lateinit var mainActivityPresenter: MainActivityPresenter
 
     private lateinit var viewPager: ViewPager
