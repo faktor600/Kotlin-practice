@@ -1,7 +1,5 @@
 package com.simbir.kotlinpractice.presentetion.view.mainactivity
 
-import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View.NO_ID
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -11,13 +9,13 @@ import com.simbir.kotlinpractice.presentetion.presenter.MainActivityPresenter
 import com.simbir.kotlinpractice.presentetion.utils.BottomNavigation
 import com.simbir.kotlinpractice.presentetion.utils.ViewPagerListener
 import com.simbir.kotlinpractice.presentetion.view.BaseActivity
-import moxy.presenter.InjectPresenter
+import javax.inject.Inject
 
 class MainActivity : BaseActivity(), MainAcitvityView {
 
     private val HELP_PAGE = 2
 
-    @InjectPresenter
+    @Inject
     lateinit var mainActivityPresenter: MainActivityPresenter
 
     private lateinit var viewPager: ViewPager

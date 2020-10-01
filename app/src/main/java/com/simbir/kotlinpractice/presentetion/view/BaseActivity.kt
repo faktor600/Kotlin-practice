@@ -1,7 +1,6 @@
 package com.simbir.kotlinpractice.presentetion.view
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View.NO_ID
 import androidx.appcompat.app.ActionBar
 import moxy.MvpAppCompatActivity
