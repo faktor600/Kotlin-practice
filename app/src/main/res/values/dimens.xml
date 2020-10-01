@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_bar_text_margin_top">30dp</dimen>
+    <dimen name="app_bar_text_margin_bottom">20dp</dimen>
+    <dimen name="app_bar_item_margin_top">24dp</dimen>
+    <dimen name="app_bar_item_margin_bottom">20dp</dimen>
+    <dimen name="app_bar_item_margin_end">25dp</dimen>
+
+    <dimen name="profile_text_main_size">16sp</dimen>
+    <dimen name="profile_text_items_size">12sp</dimen>
+    <dimen name="profile_margin_left_top_bottom">20dp</dimen>
+    <dimen name="profile_line_space">10dp</dimen>
+    <dimen name="profile_item_space">16dp</dimen>
+    <dimen name="profile_image_friend_size">48dp</dimen>
+
+    <dimen name="help_item_interval">8dp</dimen>
+    <dimen name="help_category_margin_top_bottom">20dp</dimen>
+    <dimen name="help_item_width">168dp</dimen>
+    <dimen name="help_item_height">128dp</dimen>
+    <dimen name="help_item_margin_top">12dp</dimen>
+
+    <dimen name="profile_dialog_text_size">22sp</dimen>
+
+    <dimen name="search_text_result_margin">20dp</dimen>
+
+    <dimen name="news_item_margin_all">8dp</dimen>
+    <dimen name="news_image_margin">4dp</dimen>
+    <dimen name="news_text_description_margin_top">10dp</dimen>
+    <dimen name="news_text_description_margin_bottom">16dp</dimen>
+    <dimen name="news_text_title_margin_start_end">38dp</dimen>
+    <dimen name="news_text_description_margin_start_end">26dp</dimen>
+
+    <dimen name="filter_category_margin_all">20dp</dimen>
+    <dimen name="filter_item_margin_top">17dp</dimen>
+    <dimen name="filter_item_margin_bottom">18dp</dimen>
+    <dimen name="filter_item_switch_margin_start">300dp</dimen>
+    <dimen name="filter_item_switch_margin_top">18dp</dimen>
+
+    <dimen name="event_margin_all_start">20dp</dimen>
+    <dimen name="event_margin_top">15dp</dimen>
+    <dimen name="event_organization_date_text_size">12sp</dimen>
+    <dimen name="event_organization_description_margin">10dp</dimen>
+    <dimen name="event_icons_margin_top">30dp</dimen>
+    <dimen name="event_photo_field_size_all">200dp</dimen>
+
+    <dimen name="navigation_help_image_margin_top">10dp</dimen>
+    <dimen name="navigation_help_image_margin_start">32dp</dimen>
+
+    <dimen name="navigation_help_text_margin_start_end">26dp</dimen>
+    <dimen name="navigation_help_text_margin_top_bottom">7dp</dimen>
+    <dimen name="navigation_help_text_size">10sp</dimen>
+
+    <dimen name="button_up_margin_start">20dp</dimen>
+    <dimen name="social_net_authentication_button_margin_start">40dp</dimen>
+    <dimen name="social_net_authentication_buttons_margin_top">20dp</dimen>
+    <dimen name="edit_text_authentication_margin_start_end">20dp</dimen>
+    <dimen name="button_authentication_login_margin">20dp</dimen>
+</resources>

@@ -3,4 +3,35 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorLoading">#b3000000</color>
+    <color name="colorTitle">#66a636</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorProfileTextMain">#de000000</color>
+    <color name="colorProfileTextItems">#61000000</color>
+
+    <color name="colorHelpCategoryTextChoose">#de000000</color>
+    <color name="colorHelpTextItem">#9ebf50</color>
+    <color name="colorHelpLayoutItem">#eaede8</color>
+
+    <color name="colorTabNotSelected">#b3ffffff</color>
+    <color name="colorViewPager">#e8eded</color>
+    <color name="colorTabSelected">#f2b630</color>
+
+    <color name="colorTextResult">#8a000000</color>
+    <color name="colorTextItem">#de000000</color>
+
+    <color name="newsBackground">#e8eded</color>
+    <color name="newsDateBackground">#7db354</color>
+
+    <color name="newsColorTitleItem">#627f8f</color>
+    <color name="newsColorDescriptionItem">#b3000000</color>
+
+    <color name="eventDateTextColor">#94998a</color>
+    <color name="eventLayoutDonatedColor">#e8eded</color>
+    <color name="eventOrganizationTextColor">#99000000</color>
+
+    <color name="navigationHelpTextColor">#66000000</color>
+
+    <color name="authenticationButtonColorNonActive">#61000000</color>
 </resources>

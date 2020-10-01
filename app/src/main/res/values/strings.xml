@@ -1,3 +1,76 @@
 <resources>
-    <string name="app_name">Kotlin practice</string>
+    <string name="app_name">Хочу помочь</string>
+    <string name="loading_splash">Загрузка…</string>
+    <string name="title_name_profile">Профиль</string>
+    <string name="title_name_help">Помочь</string>
+
+    <string name="user_name_profile">Константинов Денис</string>
+    <string name="user_birthday_title_profile">Дата рождения</string>
+    <string name="user_birthday_profile">01 февраля 1980</string>
+    <string name="user_field_title_profile">Сфера деятельности</string>
+    <string name="push_notifications_title_profile">Получать  push-уведомления</string>
+    <string name="user_friends_title_profile">Ваши друзья</string>
+    <string name="user_leave_account_profile">Выйти из аккаунта</string>
+
+    <string name="navigation_title_news">Новости</string>
+    <string name="navigation_title_search">Поиск</string>
+    <string name="navigation_title_help">Помочь</string>
+    <string name="navigation_title_history">История</string>
+    <string name="navigation_title_profile">Профиль</string>
+    <string name="authentication_title"> Авторизация</string>
+
+    <string name="profile_photo_change_choose">Выбрать фото</string>
+    <string name="profile_photo_change_new">Сделать снимок</string>
+    <string name="profile_photo_change_delete">Удалить</string>
+
+    <string name="help_kids">Дети</string>
+    <string name="help_adult">Взрослые</string>
+    <string name="help_elderly">Пожилые</string>
+    <string name="help_animals">Животные</string>
+    <string name="help_event">Мероприятия</string>
+    <string name="help_category_choose">Выберите категорию помощи</string>
+
+    <string name="search_view_hint">Введите название организации</string>
+
+    <string name="search_key_word">Ключевые слова: </string>
+    <string name="search_results">Результаты поиска: %1$d %2$s</string>
+    <string name="search_loupe_description">Напишите в строке поиска название мероприятия или ключевые слова.</string>
+    <string name="search_loupe_description_example_text">Например, </string>
+    <string name="search_loupe_description_example"><u>мастер-класс, помощь</u></string>
+
+    <plurals name="plurals_search_by_event">
+        <item quantity="one">мероприятие</item>
+        <item quantity="few">мероприятия</item>
+        <item quantity="many">мероприятий</item>
+    </plurals>
+
+    <plurals name="plurals_search_by_organization">
+        <item quantity="one">организация</item>
+        <item quantity="few">организации</item>
+        <item quantity="many">организаций</item>
+    </plurals>
+
+    <string name="filter_title">Фильтр</string>
+    <string name="filter_category_help">Категории помощи</string>
+
+    <string name="event_mail_questions">У вас есть вопросы?</string>
+    <string name="event_mail"><u>Напишите нам</u></string>
+    <string name="event_site_URL"><u>Перейти на сайт организаии</u></string>
+    <string name="event_donated_ppl">+3</string>
+    <string name="event_description_site">Чтобы помочь, перейдите по ссылке: </string>
+
+    <string name="help_stuff">Помочь вещами</string>
+    <string name="help_money">Помочь деньгами</string>
+    <string name="help_professional">Проф. помощь</string>
+    <string name="help_volunteer">Стать волонтером</string>
+
+    <string name="authentication_description_social_net">Для участия в мероприятиях войдите в приложение через социальные сети</string>
+    <string name="authentication_description_app">Или авторизуйтесь через приложение</string>
+    <string name="authentication_e_mail">E-mail</string>
+    <string name="authentication_password">Пароль</string>
+    <string name="authentication_standard_plain_e_mail">Введите e-mail</string>
+    <string name="authentication_standard_plain_password">Введите пароль</string>
+    <string name="authentication_forget_password"><u>Забыли пароль?</u></string>
+    <string name="authentication_registration"><u>Регистрация</u></string>
+    <string name="authentication_button_enter">ВОЙТИ</string>
 </resources>
