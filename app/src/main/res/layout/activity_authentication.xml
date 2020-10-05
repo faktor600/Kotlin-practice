@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/socialNetDescriptionAuthentication"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication_description_social_net"
+        style="@style/AuthenticationLoginDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/socialNetAppsAuthentication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/social_net_authentication_buttons_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/socialNetDescriptionAuthentication">
+
+        <ImageView
+            android:id="@+id/vkButtonAuthentication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vk" />
+
+        <ImageView
+            android:id="@+id/facebookButtonAuthentication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/social_net_authentication_button_margin_start"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:id="@+id/okButtonAuthentication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/social_net_authentication_button_margin_start"
+            android:src="@drawable/ok" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/logInAppAuthentication"
+        style="@style/AuthenticationLoginDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication_description_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/socialNetAppsAuthentication" />
+
+    <TextView
+        android:id="@+id/eMailDescriptionAuthentication"
+        style="@style/AuthenticationPlainTextDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication_e_mail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInAppAuthentication" />
+
+    <EditText
+        android:id="@+id/eMailLoginAuthentication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="@dimen/edit_text_authentication_margin_start_end"
+        android:layout_marginEnd="@dimen/edit_text_authentication_margin_start_end"
+        android:hint="@string/authentication_standard_plain_e_mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eMailDescriptionAuthentication" />
+
+    <TextView
+        android:id="@+id/passwordDescriptionAuthentication"
+        style="@style/AuthenticationPlainTextDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eMailLoginAuthentication" />
+
+    <EditText
+        android:id="@+id/passwordLoginAuthentication"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/authentication_standard_plain_password"
+        android:layout_marginStart="@dimen/edit_text_authentication_margin_start_end"
+        android:layout_marginEnd="@dimen/edit_text_authentication_margin_start_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordDescriptionAuthentication" />
+
+    <Button
+        android:id="@+id/loginButtonAuthentication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_authentication_login_margin"
+        android:layout_marginStart="@dimen/button_authentication_login_margin"
+        android:layout_marginEnd="@dimen/button_authentication_login_margin"
+        android:text="@string/authentication_button_enter"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.04"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:onClick="onClickLoginAuthentication"
+        android:enabled="false"
+        android:clickable="false"
+        android:background="@color/authenticationButtonColorNonActive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLoginAuthentication" />
+
+    <TextView
+        android:id="@+id/forgetPasswordAuthentication"
+        style="@style/AuthenticationForgetPasswordAndRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication_forget_password"
+        android:onClick="onClickForgetPasswordAuthentication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonAuthentication" />
+
+    <TextView
+        android:id="@+id/registrationAuthentication"
+        style="@style/AuthenticationForgetPasswordAndRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication_registration"
+        android:onClick="onClickRegistrationAuthentication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonAuthentication" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

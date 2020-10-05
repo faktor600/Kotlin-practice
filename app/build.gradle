@@ -45,6 +45,7 @@ dependencies {
 
     def rx_java_version = "3.0.3"
     def rx_android_version = "3.0.0"
+    def rx_android_binding_version = "4.0.0"
 
     def gson_version = "2.8.6"
 
@@ -55,7 +56,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'com.google.android.material:material:1.2.1'
     testImplementation 'junit:junit:4.12'
@@ -70,6 +71,17 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxjava:$rx_java_version"
     implementation "io.reactivex.rxjava3:rxandroid:$rx_android_version"
 
+    implementation "com.jakewharton.rxbinding4:rxbinding:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-core:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-appcompat:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-drawerlayout:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-leanback:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-recyclerview:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-slidingpanelayout:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-swiperefreshlayout:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-viewpager:$rx_android_binding_version"
+    implementation "com.jakewharton.rxbinding4:rxbinding-viewpager2:$rx_android_binding_version"
+
     implementation "com.google.code.gson:gson:$gson_version"
 
     implementation 'com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0'
@@ -80,6 +92,5 @@ dependencies {
 
     implementation "com.github.moxy-community:moxy:$moxy_version"
     kapt "com.github.moxy-community:moxy-compiler:$moxy_version"
-    implementation "com.github.moxy-community:moxy-android:$moxy_version"
-    implementation "com.github.moxy-community:moxy-androidx:$moxy_version"
+    implementation "com.github.moxy-community:moxy-app-compat:$moxy_version"
 }

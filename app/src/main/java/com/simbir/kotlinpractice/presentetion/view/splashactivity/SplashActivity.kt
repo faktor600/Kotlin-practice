@@ -6,6 +6,7 @@ import android.view.View.NO_ID
 import com.simbir.kotlinpractice.R
 import com.simbir.kotlinpractice.presentetion.presenter.SplashActivityPresenter
 import com.simbir.kotlinpractice.presentetion.view.BaseActivity
+import com.simbir.kotlinpractice.presentetion.view.authentication.AuthenticationActivity
 import com.simbir.kotlinpractice.presentetion.view.mainactivity.MainActivity
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
@@ -31,7 +32,7 @@ class SplashActivity : BaseActivity(), SplashActivityView  {
     override fun initViews() {}
 
     override fun startActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, AuthenticationActivity::class.java))
         finish()
     }
 }
