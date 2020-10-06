@@ -16,4 +16,9 @@ data class Event(
     val description: String,
     val imageUrls: List<String>,
     val site: String
-) : Parcelable
+) : Parcelable, DiffListItemModel {
+
+    override fun isSameAs(other: DiffListItemModel): Boolean {
+        return this == other
+    }
+}

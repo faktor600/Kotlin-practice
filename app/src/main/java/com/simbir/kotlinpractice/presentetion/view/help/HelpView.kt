@@ -10,5 +10,5 @@ interface HelpView : MvpView {
 
     fun hideProgress()
 
-    fun setData(items: List<Category>)
+    fun setData(items: ArrayList<Category>)
 }
