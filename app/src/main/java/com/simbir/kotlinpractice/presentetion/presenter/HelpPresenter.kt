@@ -6,6 +6,8 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import moxy.MvpPresenter
+import java.util.*
+import kotlin.collections.ArrayList
 
 class HelpPresenter(private val getCategoriesCase: GetCategoriesCase) : MvpPresenter<HelpView>() {
 
@@ -18,7 +20,7 @@ class HelpPresenter(private val getCategoriesCase: GetCategoriesCase) : MvpPrese
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ categories ->
                 viewState.hideProgress()
-                viewState.setData(categories)
+                viewState.setData(ArrayList(categories))
             }
     }
 

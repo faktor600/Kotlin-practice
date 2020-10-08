@@ -3,6 +3,7 @@ package com.simbir.kotlinpractice.presentetion.view.mainactivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.simbir.kotlinpractice.presentetion.view.help.HelpFragment
 
 class MainActivityPagerAdapter(
 
@@ -11,7 +12,11 @@ class MainActivityPagerAdapter(
 
 ) : FragmentPagerAdapter(fragmentManager, behavior) {
 
-    private lateinit var fragments: List<Fragment>
+    private val fragments: ArrayList<Fragment> = ArrayList()
+
+    init {
+        fragments.add(HelpFragment())
+    }
 
     override fun getItem(position: Int): Fragment {
         return fragments[position]

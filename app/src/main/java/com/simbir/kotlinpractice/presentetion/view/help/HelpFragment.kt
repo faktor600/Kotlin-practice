@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.simbir.kotlinpractice.BuildConfig
 import com.simbir.kotlinpractice.R
+import com.simbir.kotlinpractice.di.AppDatabaseModule
 import com.simbir.kotlinpractice.di.InputStreamModule
 import com.simbir.kotlinpractice.di.component.DaggerGetCategoriesComponent
 import com.simbir.kotlinpractice.domain.Category
@@ -32,6 +33,7 @@ class HelpFragment : BaseFragment(), HelpView {
                     InputStreamModule(it, BuildConfig.JSON_CATEGORIES_LIST)
                 }
             )
+            .appDatabaseModule(context?.let { AppDatabaseModule(it) })
             .build()
 
         return HelpPresenter(component.getCategoriesCase())
@@ -73,6 +75,4 @@ class HelpFragment : BaseFragment(), HelpView {
 
         helpAdapter.updateItems(items)
     }
-
-
 }

@@ -20,8 +20,8 @@ class CategoryJsonRepositoryImpl @Inject constructor(
 ): CategoryJsonRepository {
 
     override fun getCategoryListFromJson(): Single<List<Category>> {
-        return Single.just(gson.fromJson(initJson.invoke(inputStream).orEmpty(), CategoryJson::class.java))
-            .toFlowable()
+        return Single.just(gson.fromJson(initJson.invoke(inputStream).orEmpty(), ArrayList<CategoryJson>()::class.java))
+            .flattenAsFlowable { categories -> categories }
             .map(mapper)
             .toList()
     }

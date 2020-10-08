@@ -5,6 +5,7 @@ import com.simbir.kotlinpractice.data.net.map.NetEventMap
 import com.simbir.kotlinpractice.domain.Event
 import com.simbir.kotlinpractice.domain.repository.event.EventNetRepository
 import io.reactivex.rxjava3.core.Single
+import java.util.*
 import javax.inject.Inject
 
 class EventNetRepositoryImpl @Inject constructor(
@@ -19,5 +20,6 @@ class EventNetRepositoryImpl @Inject constructor(
             .flattenAsFlowable { events -> events }
             .map(mapper)
             .toList()
+            .onErrorReturn { Collections.emptyList() }
     }
 }

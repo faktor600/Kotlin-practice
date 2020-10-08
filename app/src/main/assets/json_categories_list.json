@@ -1,4 +1,4 @@
-{"helpCategories":[
+[
   {"id" : 1,
     "name" :  "Дети",
     "drawableId" : "R.drawable.icon_kids"
@@ -15,5 +15,5 @@
   {"id" : 5,
     "name" :  "Мероприятия",
     "drawableId" : "R.drawable.icon_event"}
+
 ]
-}

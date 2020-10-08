@@ -5,6 +5,7 @@ import com.simbir.kotlinpractice.data.net.map.NetCategoryMap
 import com.simbir.kotlinpractice.domain.Category
 import com.simbir.kotlinpractice.domain.repository.category.CategoryNetRepository
 import io.reactivex.rxjava3.core.Single
+import java.util.*
 import javax.inject.Inject
 
 class CategoryNetRepositoryImpl @Inject constructor(
@@ -20,5 +21,6 @@ class CategoryNetRepositoryImpl @Inject constructor(
             .flatMapSingle { name -> api.getCategory(name) }
             .map(mapper)
             .toList()
+            .onErrorReturn { Collections.emptyList() }
     }
 }

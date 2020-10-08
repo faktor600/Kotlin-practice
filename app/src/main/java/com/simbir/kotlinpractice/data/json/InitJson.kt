@@ -6,6 +6,6 @@ import javax.inject.Inject
 class InitJson @Inject constructor() : (InputStream?) -> String? {
 
     override fun invoke(inputStream: InputStream?): String? {
-        return inputStream?.bufferedReader().use { it?.readLine() }
+        return inputStream?.bufferedReader().use { it?.readText() }
     }
 }
