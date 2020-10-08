@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/profileDialogButtonChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_photo_change_choose"
+        android:drawableStart="@drawable/upload"
+        style="@style/ProfileDialogItemsStyle"/>
+
+    <Button
+        android:id="@+id/profileDialogButtonNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:text="@string/profile_photo_change_new"
+        android:drawableStart="@drawable/camera"
+        style="@style/ProfileDialogItemsStyle"/>
+
+    <Button
+        android:id="@+id/profileDialogButtonDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_photo_change_delete"
+        android:drawableStart="@drawable/delete"
+        android:layout_marginBottom="30dp"
+        style="@style/ProfileDialogItemsStyle"/>
+</LinearLayout>

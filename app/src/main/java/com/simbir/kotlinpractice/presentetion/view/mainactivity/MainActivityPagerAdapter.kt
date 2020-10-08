@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.simbir.kotlinpractice.presentetion.view.help.HelpFragment
+import com.simbir.kotlinpractice.presentetion.view.profile.ProfileFragment
 
 class MainActivityPagerAdapter(
 
@@ -16,6 +17,7 @@ class MainActivityPagerAdapter(
 
     init {
         fragments.add(HelpFragment())
+        fragments.add(ProfileFragment())
     }
 
     override fun getItem(position: Int): Fragment {

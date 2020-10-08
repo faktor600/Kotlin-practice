@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/profileAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/actionBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/title_name_profile"
+                style="@style/ActionBarTitleStyle"/>
+
+            <ImageView
+                android:id="@+id/profileChangeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/app_bar_item_margin_top"
+                android:layout_marginEnd="@dimen/app_bar_item_margin_end"
+                android:layout_gravity="end"
+                android:src="@drawable/edit" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/profileScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/profileButtonLeaveAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileAppBar">
+
+        <LinearLayout
+            android:id="@+id/profileLayoutScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="760dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profileLayoutUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/profileImageUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/image_man" />
+
+                <TextView
+                    android:id="@+id/profileTextUserName"
+                    style="@style/ProfileTextMainStyle.User"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/profile_margin_left_top_bottom"
+                    android:text="@string/user_name_profile" />
+
+                <TextView
+                    android:id="@+id/profileTextUserBirthdayTitle"
+                    style="@style/ProfileTextItemStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/profile_item_space"
+                    android:text="@string/user_birthday_title_profile" />
+
+                <TextView
+                    android:id="@+id/profileTextUserBirthday"
+                    style="@style/ProfileTextMainStyle.Other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_birthday_profile" />
+
+                <TextView
+                    android:id="@+id/profileTextUserFieldTitle"
+                    style="@style/ProfileTextItemStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/profile_line_space"
+                    android:text="@string/user_field_title_profile" />
+
+                <TextView
+                    android:id="@+id/profileTextUserField"
+                    style="@style/ProfileTextMainStyle.Other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Хирургия, травмотология" />
+
+                <LinearLayout
+                    android:id="@+id/profileLayoutPushNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/profileTextPushNotifications"
+                        style="@style/ProfileTextMainStyle.Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginBottom="18dp"
+                        android:text="@string/push_notifications_title_profile" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/profileSwitchPushNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginBottom="18dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profileLayoutFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_selector_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profileTextFriendsTitle"
+                    style="@style/ProfileTextItemStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/profile_margin_left_top_bottom"
+                    android:text="@string/user_friends_title_profile" />
+
+                <LinearLayout
+                    android:id="@+id/profileLayoutDmitriy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_margin_left_top_bottom"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_image_friend_size"
+                        android:layout_height="@dimen/profile_image_friend_size"
+                        android:src="@drawable/avatar_3" />
+
+                    <TextView
+                        style="@style/ProfileTextMainStyle.Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_margin_left_top_bottom"
+                        android:layout_marginTop="15dp"
+                        android:text="Дмитрий Валерьевич" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileLayoutEvgeniy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_margin_left_top_bottom"
+                    android:layout_marginTop="@dimen/profile_line_space"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_image_friend_size"
+                        android:layout_height="@dimen/profile_image_friend_size"
+                        android:src="@drawable/avatar_2" />
+
+                    <TextView
+                        style="@style/ProfileTextMainStyle.Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_margin_left_top_bottom"
+                        android:layout_marginTop="15dp"
+                        android:text="Евгений Александров" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileLayoutVictor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_margin_left_top_bottom"
+                    android:layout_marginTop="@dimen/profile_line_space"
+                    android:layout_marginBottom="@dimen/profile_margin_left_top_bottom"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_image_friend_size"
+                        android:layout_height="@dimen/profile_image_friend_size"
+                        android:src="@drawable/avatar_1" />
+
+                    <TextView
+                        style="@style/ProfileTextMainStyle.Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_margin_left_top_bottom"
+                        android:layout_marginTop="15dp"
+                        android:text="Виктор Кузнецов" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/profileButtonLeaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorTitle"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/user_leave_account_profile"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
