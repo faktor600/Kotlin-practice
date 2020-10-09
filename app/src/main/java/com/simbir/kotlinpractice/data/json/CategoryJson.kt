@@ -11,5 +11,5 @@ class CategoryJson(
     val categoryName: String,
 
     @SerializedName("drawableId")
-    val drawableRes: Int
+    val drawableRes: String
 )

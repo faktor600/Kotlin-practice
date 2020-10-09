@@ -1,6 +1,7 @@
 package com.simbir.kotlinpractice.data.repositoryimpl.category
 
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.simbir.kotlinpractice.data.json.CategoryJson
 import com.simbir.kotlinpractice.data.json.InitJson
 import com.simbir.kotlinpractice.data.json.map.JsonCategoryMap
@@ -20,7 +21,10 @@ class CategoryJsonRepositoryImpl @Inject constructor(
 ): CategoryJsonRepository {
 
     override fun getCategoryListFromJson(): Single<List<Category>> {
-        return Single.just(gson.fromJson(initJson.invoke(inputStream).orEmpty(), ArrayList<CategoryJson>()::class.java))
+        return Single.just(gson.fromJson(
+            initJson.invoke(inputStream).orEmpty(),
+            TypeToken.getParameterized(ArrayList::class.java, CategoryJson::class.java).type) as ArrayList<CategoryJson>
+        )
             .flattenAsFlowable { categories -> categories }
             .map(mapper)
             .toList()

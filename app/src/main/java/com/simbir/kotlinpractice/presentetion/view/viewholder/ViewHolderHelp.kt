@@ -1,5 +1,6 @@
 package com.simbir.kotlinpractice.presentetion.view.viewholder
 
+import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,7 +15,12 @@ class ViewHolderHelp(view: View) : BaseViewHolder<Category>(view) {
     private val nameCategory: TextView = view.findViewById(R.id.textHelpItem)
 
     override fun bind(item: Category) {
+        val context: Context = itemView.context
         nameCategory.text = item.name
-        imageCategory.setImageResource(item.drawable)
+        imageCategory.setImageResource(context.resources.getIdentifier(
+            item.drawable,
+            "drawable",
+            context.applicationContext.packageName
+        ))
     }
 }
