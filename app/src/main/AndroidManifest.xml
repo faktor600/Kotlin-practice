@@ -35,6 +35,7 @@
         </activity>
         <activity android:name=".presentetion.view.mainactivity.MainActivity"/>
         <activity android:name=".presentetion.view.authentication.AuthenticationActivity"/>
+        <activity android:name=".presentetion.view.eventdetails.EventDetailsActivity"/>
     </application>
 
 </manifest>
