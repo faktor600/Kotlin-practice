@@ -19,7 +19,7 @@ abstract class BaseActivity : MvpAppCompatActivity() {
 
         if(getActionBarId() != NO_ID){
             supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-            supportActionBar?.customView = findViewById(getActionBarId())
+            supportActionBar?.customView = layoutInflater.inflate(getActionBarId(), null)
         } else{
             supportActionBar?.hide()
         }
