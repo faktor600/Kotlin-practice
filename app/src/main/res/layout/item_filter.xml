@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutFilter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textFilter"
+            android:layout_marginTop="@dimen/filter_item_margin_top"
+            android:layout_marginBottom="@dimen/filter_item_margin_bottom"
+            android:layout_marginStart="@dimen/filter_category_margin_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SearchTextItemStyle"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:checked="true"
+            android:id="@+id/switchFilter"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/filter_item_switch_margin_top"
+            android:layout_marginTop="@dimen/filter_item_switch_margin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+</RelativeLayout>
