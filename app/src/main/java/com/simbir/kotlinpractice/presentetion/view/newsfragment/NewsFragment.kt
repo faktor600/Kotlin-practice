@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.simbir.kotlinpractice.BuildConfig
 import com.simbir.kotlinpractice.R
+import com.simbir.kotlinpractice.di.AppDatabaseModule
 import com.simbir.kotlinpractice.di.InputStreamModule
 import com.simbir.kotlinpractice.di.component.DaggerGetCategoriesComponent
 import com.simbir.kotlinpractice.di.component.DaggerGetEventComponent
@@ -34,9 +35,11 @@ class NewsFragment : BaseFragment(), NewsView {
         val context = context
         val componentEvent: GetEventComponent = DaggerGetEventComponent.builder()
             .inputStreamModule(context?.let { InputStreamModule(it, BuildConfig.JSON_EVENTS_LIST) })
+            .appDatabaseModule(context?.let { AppDatabaseModule(it) })
             .build()
         val componentCategories: GetCategoriesComponent = DaggerGetCategoriesComponent.builder()
             .inputStreamModule(context?.let { InputStreamModule(it, BuildConfig.JSON_CATEGORIES_LIST) })
+            .appDatabaseModule(context?.let { AppDatabaseModule(it) })
             .build()
         return NewsPresenter(componentEvent.getEventCase(), componentCategories.getCategoriesCase())
     }

@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.simbir.kotlinpractice.presentetion.view.help.HelpFragment
+import com.simbir.kotlinpractice.presentetion.view.newsfragment.NewsFragment
 import com.simbir.kotlinpractice.presentetion.view.profile.ProfileFragment
 
 class MainActivityPagerAdapter(
@@ -16,6 +17,7 @@ class MainActivityPagerAdapter(
     private val fragments: ArrayList<Fragment> = ArrayList()
 
     init {
+        fragments.add(NewsFragment())
         fragments.add(HelpFragment())
         fragments.add(ProfileFragment())
     }
