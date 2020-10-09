@@ -1,6 +1,4 @@
-{
-  "events": [
-    {
+[{
       "eventId" : 1,
       "eventName" : "Двенадцатилетнюю девочку спасет замена кардиостимулятора",
       "categories" : [
@@ -230,6 +228,4 @@
         "https://podari-zhizn.ru/sites/default/files/imagecache/creation/8.donory_krasyat_skameyki.jpg"
       ],
       "site" : "https://podari-zhizn.ru/main/node/36426"
-    }
-  ]
-}
+}]

@@ -23,7 +23,7 @@ class EventRepositoryImpl @Inject constructor(
             eventDB.getEventListFromDatabase(),
             eventJson.getEventListFromJson()
         )
-            .filter { events -> events.isEmpty()}
+            .filter { events -> events.isNotEmpty()}
             .first(Collections.emptyList())
     }
 }

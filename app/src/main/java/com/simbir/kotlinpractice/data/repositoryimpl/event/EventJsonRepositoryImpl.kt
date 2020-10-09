@@ -1,6 +1,7 @@
 package com.simbir.kotlinpractice.data.repositoryimpl.event
 
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.simbir.kotlinpractice.data.json.EventJson
 import com.simbir.kotlinpractice.data.json.InitJson
 import com.simbir.kotlinpractice.data.json.map.JsonEventMap
@@ -20,8 +21,11 @@ class EventJsonRepositoryImpl @Inject constructor(
 ): EventJsonRepository {
 
     override fun getEventListFromJson(): Single<List<Event>> {
-        return Single.just(gson.fromJson(initJson.invoke(inputStream).orEmpty(), EventJson::class.java))
-            .toFlowable()
+        return Single.just(gson.fromJson(
+            initJson.invoke(inputStream).orEmpty(),
+            TypeToken.getParameterized(ArrayList::class.java, EventJson::class.java).type
+            )as ArrayList<EventJson>)
+            .flattenAsFlowable { events -> events }
             .map(mapper)
             .toList()
 
