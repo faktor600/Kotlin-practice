@@ -8,7 +8,7 @@ class NetCategoryMap @Inject constructor(): (CategoryNet) -> Category {
 
     override fun invoke(category: CategoryNet) = Category(
         id = category.id.toLong(),
-        drawable = category.image.toInt(),
+        drawable = category.image,
         name = category.name
     )
 }

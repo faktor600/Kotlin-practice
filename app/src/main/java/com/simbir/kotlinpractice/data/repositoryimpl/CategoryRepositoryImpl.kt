@@ -23,7 +23,7 @@ class CategoryRepositoryImpl @Inject constructor(
             categoryDB.getCategoryListFromDatabase(),
             categoryJson.getCategoryListFromJson()
         )
-            .filter { categories -> categories.isEmpty()}
+            .filter { categories -> categories.isNotEmpty() }
             .first(Collections.emptyList())
     }
 }
